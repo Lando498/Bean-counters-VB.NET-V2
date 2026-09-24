@@ -35,6 +35,7 @@ Partial Class Form1
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.Button2 = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -140,6 +141,19 @@ Partial Class Form1
         Me.Label6.TabIndex = 8
         Me.Label6.Text = "0"
         '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.Color.DarkRed
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button2.Font = New System.Drawing.Font("Copperplate Gothic Bold", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.ForeColor = System.Drawing.Color.White
+        Me.Button2.Location = New System.Drawing.Point(498, 274)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(174, 52)
+        Me.Button2.TabIndex = 10
+        Me.Button2.Text = "PLAY HARD MODE"
+        Me.Button2.UseVisualStyleBackColor = False
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -147,6 +161,7 @@ Partial Class Form1
         Me.BackgroundImage = Global.WindowsApp11.My.Resources.Resources._12
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.ClientSize = New System.Drawing.Size(752, 450)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label3)
@@ -158,6 +173,9 @@ Partial Class Form1
         Me.Controls.Add(Me.PictureBox1)
         Me.DoubleBuffered = True
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximizeBox = False
+        Me.MaximumSize = New System.Drawing.Size(770, 497)
+        Me.MinimumSize = New System.Drawing.Size(770, 497)
         Me.Name = "Form1"
         Me.Text = "Bean counters VB.NET V2"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -178,4 +196,5 @@ Partial Class Form1
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
+    Friend WithEvents Button2 As Button
 End Class

@@ -11,6 +11,7 @@ Public Class Form1
     Dim highscore As Integer = 0
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Button1.Visible = False
+        Button2.Visible = False
         PictureBox1.Visible = True
         PictureBox2.Visible = True
         ingame = True
@@ -64,6 +65,7 @@ Public Class Form1
             PictureBox1.Visible = False
             PictureBox2.Visible = False
             Button1.Visible = True
+            Button2.Visible = True
             lives = 3
             speed = 2
             score = 0
@@ -72,9 +74,6 @@ Public Class Form1
         End If
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs)
-        spawnsack()
-    End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Label1.Text = score.ToString()
@@ -94,5 +93,17 @@ Public Class Form1
         Else File.Create("highscore.txt").Dispose()
             File.WriteAllText("highscore.txt", highscore.ToString())
         End If
+    End Sub
+
+    Private Sub Button2_Click_1(sender As Object, e As EventArgs) Handles Button2.Click
+        Button1.Visible = False
+        Button2.Visible = False
+        lives = 0
+        Label4.Text = lives.ToString()
+        speed = 15
+        PictureBox1.Visible = True
+        PictureBox2.Visible = True
+        ingame = True
+        spawnsack()
     End Sub
 End Class
